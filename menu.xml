@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="menu.xsl"?>
+<!DOCTYPE menu [
+<!ELEMENT menu (meals, drinks)>
+<!ELEMENT meals (snacks, main_dishes, desserts)>
+<!ELEMENT snacks (snack+)>
+<!ELEMENT snack (name, price, ingredients, calories, macros)>
+<!ELEMENT main_dishes (soups, pizzas)>
+<!ELEMENT soups (soup+)>
+<!ELEMENT soup  (name, price, ingredients, calories, macros)>
+<!ELEMENT pizzas (pizza+)>
+<!ELEMENT pizza  (name, price, size, ingredients, calories, macros)>
+<!ELEMENT desserts  (dessert+)>
+<!ELEMENT dessert (name, price, ingredients, calories, macros)>
+<!ELEMENT drinks (cold_drinks, hot_drinks)>
+<!ELEMENT hot_drinks (drink+)>
+<!ELEMENT cold_drinks (drink+)>
+<!ELEMENT hot_drink  (drink+)>
+<!ELEMENT cold_drink (drink+)>
+<!ELEMENT drink (name, price, calories, capacity)>
+<!ELEMENT macros (protein, fat, carbs)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT ingredients (#PCDATA)>
+<!ELEMENT calories (#PCDATA)>
+<!ELEMENT protein (#PCDATA)>
+<!ELEMENT fat (#PCDATA)>
+<!ELEMENT carbs (#PCDATA)>
+<!ELEMENT size (#PCDATA)>
+<!ELEMENT capacity (#PCDATA)>
+
+<!ATTLIST snack id CDATA #REQUIRED>
+<!ATTLIST soup id CDATA #REQUIRED>
+<!ATTLIST pizza id CDATA #REQUIRED>
+<!ATTLIST dessert id CDATA #REQUIRED>
+<!ATTLIST drink id CDATA #REQUIRED>
+<!ATTLIST price currency CDATA #REQUIRED>
+<!ATTLIST calories unit CDATA #FIXED "kcal">
+<!ATTLIST protein unit CDATA #FIXED "g">
+<!ATTLIST fat unit CDATA #FIXED "g">
+<!ATTLIST carbs unit CDATA #FIXED "g">
+<!ATTLIST size unit CDATA #FIXED "cm">
+<!ATTLIST capacity unit CDATA #FIXED "ml">
+]>
+
+<menu>
+	<meals>
+		<snacks>
+			<snack id ="1">
+				<name>Garlic Bread</name>
+				<price currency ="PLN">15</price>
+				<ingredients>
+          Wholemeal Bread, Garlic Butter, Herbs
+        </ingredients>
+				<calories unit="kcal">150</calories>
+				<macros>
+					<protein unit="g">4.9</protein>
+					<fat unit="g">8</fat>
+					<carbs unit="g">25</carbs>
+				</macros>
+			</snack>
+			<snack id ="2">
+				<name>Cheeseboard</name>
+				<price currency ="PLN">2</price>
+				<ingredients>
+          Parmigiano Reggiano, Grana Padano, Ricotta, Gorgonzola, Pecorino
+        </ingredients>
+				<calories>180</calories>
+				<macros>
+					<protein unit="g">4.9</protein>
+					<fat unit="g">8</fat>
+					<carbs unit="g">25</carbs>
+				</macros>
+			</snack>
+			<snack id ="3">
+				<name>Meat Table</name>
+				<price currency ="PLN">18.50</price>
+				<ingredients>
+          Prosciutto Crudo, Prosciutto Cotto, Bresaola, Salame
+        </ingredients>
+				<calories unit="kcal">150</calories>
+				<macros>
+					<protein unit="g">5.9</protein>
+					<fat unit="g">7</fat>
+					<carbs unit="g">30</carbs>
+				</macros>
+			</snack>
+		</snacks>
+		<main_dishes>
+			<soups>
+				<soup id="4">
+					<name>Tomato Soup</name>
+					<price currency="PLN">16</price>
+					<ingredients>
+            Tomatoes, Yellow Onion, Basil Leaves, Garlic, Chicken Broth, Heavy Cream
+          </ingredients>
+					<calories unit="kcal">380</calories>
+					<macros>
+						<protein unit="g">7</protein>
+						<fat unit="g">9</fat>
+						<carbs unit="g">29</carbs>
+					</macros>
+				</soup>
+				<soup id = "5">
+					<name>Beetroot Soup</name>
+					<price currency="PLN">17</price>
+					<ingredients>
+            Beetroot, Onion, Garlic, Carrots, Chicken Broth,
+          </ingredients>
+					<calories unit="kcal">235</calories>
+					<macros>
+						<protein unit="g">5</protein>
+						<fat unit="g">8</fat>
+						<carbs unit="g">12</carbs>
+					</macros>
+				</soup>
+				<soup id="6">
+					<name>Mushroom Soup</name>
+					<price currency="PLN">18</price>
+					<ingredients>
+            Mushrooms, Onion, Oil, Garlic, Celery, Parsley, Sunflower Oil
+          </ingredients>
+					<calories unit="kcal">360</calories>
+					<macros>
+						<protein unit="g">6</protein>
+						<fat unit="g">6</fat>
+						<carbs unit="g">21</carbs>
+					</macros>
+				</soup>
+			</soups>
+			<pizzas>
+				<pizza id='7'>
+					<name>Margherita</name>
+					<price currency='PLN'>22</price>
+					<size unit='cm'>32</size>
+					<ingredients>
+            Tomato Sauce, Mozzarella, Parmesan, Basil
+          </ingredients>
+					<calories unit='kcal'>750</calories>
+					<macros>
+						<protein unit='g'>28</protein>
+						<fat unit='g'>25</fat>
+						<carbs unit='g'>70</carbs>
+					</macros>
+				</pizza>
+				<pizza id='8'>
+					<name>Capricciosa</name>
+					<price currency='PLN'>30</price>
+					<size unit='cm'>28</size>
+					<ingredients>
+            Tomato Sauce, Ham, Mushrooms, Artichoke
+          </ingredients>
+					<calories unit='kcal'>900</calories>
+					<macros>
+						<protein unit='g'>33</protein>
+						<fat unit='g'>31</fat>
+						<carbs unit='g'>81</carbs>
+					</macros>
+				</pizza>
+				<pizza id='9'>
+					<name>Pepperoni</name>
+					<price currency='PLN'>25</price>
+					<size unit='cm'>32</size>
+					<ingredients>
+            Tomato Sauce, Pepperoni, Olives, Parmesan
+          </ingredients>
+					<calories unit='kcal'>800</calories>
+					<macros>
+						<protein unit='g'>29</protein>
+						<fat unit='g'>27</fat>
+						<carbs unit='g'>76</carbs>
+					</macros>
+				</pizza>
+			</pizzas>
+		</main_dishes>
+		<desserts>
+			<dessert id ="10">
+				<name>Brownie</name>
+				<price currency="PLN">30</price>
+				<ingredients>
+          Flour, Butter, Eggs, Chocolate, Cocoa Powder, Sugar
+        </ingredients>
+				<calories unit="kcal">250</calories>
+				<macros>
+					<protein unit="g">1.5</protein>
+					<fat unit="g">7</fat>
+					<carbs unit="g">12</carbs>
+				</macros>
+			</dessert>
+			<dessert id="11">
+				<name>Ice Cream</name>
+				<price currency="PLN">17</price>
+				<ingredients>
+          Milk Fat, Sugar, Vanilla Extract, Heavy Cream, Salted Caramel Sauce
+        </ingredients>
+				<calories unit="kcal">160</calories>
+				<macros>
+					<protein unit="g">11</protein>
+					<fat unit="g">7</fat>
+					<carbs unit="g">24</carbs>
+				</macros>
+			</dessert>
+			<dessert id="12">
+				<name>Chocolate Pudding</name>
+				<price currency="PLN">25</price>
+				<ingredients>
+          Cocoa, Sugar, Cornstarch, Milk, Butter, Vanilla Extract
+        </ingredients>
+				<calories unit="kcal">240</calories>
+				<macros>
+					<protein unit="g">5</protein>
+					<fat unit="g">4</fat>
+					<carbs unit="g">30</carbs>
+				</macros>
+			</dessert>
+		</desserts>
+	</meals>
+	<drinks>
+		<cold_drinks>
+			<drink id ="13">
+				<name>Cola</name>
+				<price currency ="PLN">4.50</price>
+				<calories unit="kcal">80</calories>
+				<capacity unit="ml">250</capacity>
+			</drink>
+			<drink id ="14">
+				<name>Orange Juice</name>
+				<price currency ="PLN">3.50</price>
+				<calories unit="kcal">60</calories>
+				<capacity unit="ml">250</capacity>
+			</drink>
+			<drink id ="15">
+				<name>Ice Tea</name>
+				<price currency ="PLN">4</price>
+				<calories unit="kcal">75</calories>
+				<capacity unit="ml">250</capacity>
+			</drink>
+		</cold_drinks>
+		<hot_drinks>
+			<drink id ="16">
+				<name>White Coffee</name>
+				<price currency ="PLN">7.50</price>
+				<calories unit="kcal">105</calories>
+				<capacity unit="ml">300</capacity>
+			</drink>
+			<drink id ="17">
+				<name>Black Coffee</name>
+				<price currency ="PLN">6</price>
+				<calories unit="kcal">76</calories>
+				<capacity unit="ml">300</capacity>
+			</drink>
+			<drink id ="18">
+				<name>Tea</name>
+				<price currency ="PLN">4.50</price>
+				<calories unit="kcal">20</calories>
+				<capacity unit="ml">300</capacity>
+			</drink>
+		</hot_drinks>
+	</drinks>
+</menu>
